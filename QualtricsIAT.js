@@ -1,4 +1,4 @@
-define(['pipAPI','https://github.com/youjenjen/iat/blob/eedff5f8473b640a9135913bb7fd93661e0c2848/IATFramework.js'], function(APIConstructor, iatExtension){
+define(['pipAPI','https://raw.githubusercontent.com/youjenjen/iat/main/IATFramework.js'], function(APIConstructor, iatExtension){
 	var API = new APIConstructor();
 	
   
