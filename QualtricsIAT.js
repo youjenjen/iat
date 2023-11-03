@@ -103,7 +103,7 @@ define(['pipAPI','https://raw.githubusercontent.com/youjenjen/iat/main/IATFramew
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 		},
         base_url : {//Where are your images at? You might want to copy the photos to your own server
-            image : 'https://baranan.github.io/minno-tasks/images/'
+            image : 'https://github.com/youjenjen/iat/tree/175dac5e20ed84451107db79fd41e52b092d4d39/images'
         }
     });
 });
