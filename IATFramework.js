@@ -112,7 +112,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			},
 
 			base_url : {//Where are your images at?
-				image : 'https://github.com/youjenjen/iat/tree/175dac5e20ed84451107db79fd41e52b092d4d39/images'
+				image : '/images'
 			},
 
 			//nBlocks : 7, This is not-supported anymore. If you want a 5-block IAT, change blockSecondCombined_nTrials to 0.
