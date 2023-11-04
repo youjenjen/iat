@@ -19,7 +19,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		//You can also do that from the outside, with a dedicated jsp file.
 		var iatObj =
 		{
-			fullscreen:false, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
+			fullscreen:true, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
         
 			isTouch:false, //Set whether the task is on a touch device.
 			//Set the canvas of the task
@@ -33,9 +33,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			},
 			//When scoring, we will consider the compatible condition the pairing condition that requires response with one key to [category1,attribute1] and the other key to [category2,attribute2]
 			category1 : {
-				name : 'Black people', //Will appear in the data and in the default feedback message.
+				name : 'low pitch', //Will appear in the data and in the default feedback message.
 				title : {
-					media : {word : 'Black people'}, //Name of the category presented in the task.
+					media : {word : 'low pitch'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
@@ -51,9 +51,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
 			},
 			category2 :	{
-				name : 'White people', //Will appear in the data and in the default feedback message.
+				name : 'high pitch', //Will appear in the data and in the default feedback message.
 				title : {
-					media : {word : 'White people'}, //Name of the category presented in the task.
+					media : {word : 'high pitch'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
@@ -70,42 +70,42 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			},
 			attribute1 :
 			{
-				name : 'Bad words',
+				name : 'high density',
 				title : {
-					media : {word : 'Bad words'},
+					media : {word : 'high density words'},
 					css : {color:'#0000FF','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'awful'},
-					{word: 'failure'},
-					{word: 'agony'},
-					{word: 'hurt'},
-					{word: 'horrible'},
-					{word: 'terrible'},
-					{word: 'nasty'},
-					{word: 'evil'}
+					{word: 'crowded'},
+					{word: 'thick'},
+					{word: 'packed'},
+					{word: 'tight'},
+					{word: 'compact'},
+					{word: 'crammed'},
+					{word: 'condensed'},
+					{word: 'close-knit'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 			},
 			attribute2 :
 			{
-				name : 'Good words',
+				name : 'low density',
 				title : {
-					media : {word : 'Good words'},
+					media : {word : 'low density words'},
 					css : {color:'#0000FF','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'laughter'},
-					{word: 'happy'},
-					{word: 'glorious'},
-					{word: 'joy'},
-					{word: 'wonderful'},
-					{word: 'peace'},
-					{word: 'pleasure'},
-					{word: 'love'}
+					{word: 'loose'},
+					{word: 'open'},
+					{word: 'airy'},
+					{word: 'spacious'},
+					{word: 'uncrowded'},
+					{word: 'roomy'},
+					{word: 'sparse'},
+					{word: 'scattered'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -134,7 +134,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			randomAttSide : false, // Accepts 'true' and 'false'. If false, then attribute2 on the right.
 
 			//Should we randomize which category is on the right first?
-			randomBlockOrder : true, //Accepts 'true' and 'false'. If false, then category1 on the left first.
+			randomBlockOrder : false, //Accepts 'true' and 'false'. If false, then category1 on the left first.
 			//Note: the player sends block3Cond at the end of the task (saved in the explicit table) to inform about the categories in that block.
 			//In the block3Cond variable: "att1/cat1,att2/cat2" means att1 and cat1 on the left, att2 and cat2 on the right.
 
@@ -143,15 +143,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 
 			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family:arial">' +
 			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Press the other key to continue.<p/>',
+			'Press the other correct key to continue.<p/>',
 
 			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family:arial">' +
 			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Touch the other side to continue.<p/>',
+			'Touch the other correct side to continue.<p/>',
 
-			errorCorrection : true, //Should participants correct error responses?
-			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
-			ITIDuration : 250, //Duration between trials.
+			errorCorrection : false, //Should participants correct error responses?
+			errorFBDuration : 307, //Duration of error feedback display (relevant only when errorCorrection is false)
+			ITIDuration : 400, //Duration between trials.
 
 			fontColor : '#000000', //The default color used for printed messages.
 			
@@ -183,7 +183,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
 				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
 				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
 				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
 				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
 			instAttributePracticeTouch: [
@@ -210,7 +209,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#336600">rightCategory</font>.<br/>' +
 				'Items will appear one at a time.<br/><br/>' +
 				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
 				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
 				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
 			instCategoriesPracticeTouch: [

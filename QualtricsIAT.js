@@ -5,29 +5,15 @@ define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(AP
   //Randomly choose the attribute words from a larger list of attribute words.
   //Internal studies in Project Implicit found no difference in performance between the words.
   var posWords = API.shuffle([
-            'Love', 'Cheer', 'Friend', 'Pleasure', 
-            'Adore', 'Cheerful', 'Friendship', 'Joyful', 
-            'Smiling','Cherish', 'Excellent', 'Glad', 
-            'Joyous', 'Spectacular', 'Appealing', 'Delight', 
-            'Excitement', 'Laughing', 'Attractive','Delightful', 
-            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful', 
-            'Fantastic', 'Happy', 'Lovely', 'Terrific', 
-            'Celebrate', 'Enjoy', 'Magnificent', 'Triumph']);
+            'crowded','thick','packed','tight','compact','crammed','condensed','close-knit']);
   var negWords = API.shuffle([
-            'Abuse', 'Grief', 'Poison', 'Sadness', 
-            'Pain', 'Despise', 'Failure', 'Nasty', 
-            'Angry', 'Detest', 'Horrible', 'Negative', 
-            'Ugly', 'Dirty', 'Gross', 'Evil', 
-            'Rotten','Annoy', 'Disaster', 'Horrific',  
-            'Scorn', 'Awful', 'Disgust', 'Hate', 
-            'Humiliate', 'Selfish', 'Tragic', 'Bothersome', 
-            'Hatred', 'Hurtful', 'Sickening', 'Yucky']);
+            'loose','open','airy','spacious','uncrowded','roomy','sparse','scattered']);
   
     return iatExtension({
         category1 : {
-            name : 'Black people', //Will appear in the data.
+            name : 'low pitch', //Will appear in the data.
             title : {
-                media : {word : 'Black people'}, //Name of the category presented in the task.
+                media : {word : 'low pitch'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
@@ -43,9 +29,9 @@ define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(AP
     		stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },    
         category2 :    {
-            name : 'White people', //Will appear in the data.
+            name : 'high pitch', //Will appear in the data.
             title : {
-                media : {word : 'White people'}, //Name of the category presented in the task.
+                media : {word : 'high pitch'}, //Name of the category presented in the task.
                 css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
@@ -62,9 +48,9 @@ define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(AP
         },
 		attribute1 :
 		{
-			name : 'Bad',
+			name : 'high density',
 			title : {
-				media : {word : 'Bad'},
+				media : {word : 'high density'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
@@ -83,9 +69,9 @@ define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(AP
 		},
 		attribute2 :
 		{
-			name : 'Good',
+			name : 'low density',
 			title : {
-				media : {word : 'Good'},
+				media : {word : 'low density'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
