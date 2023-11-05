@@ -36,7 +36,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				name : 'low pitch', //Will appear in the data and in the default feedback message.
 				title : {
 					media : {word : 'low pitch'}, //Name of the category presented in the task.
-					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
+					css : {color:'#000000','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
@@ -48,7 +48,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					{word: 'Shanice'}
 				],
 				//Stimulus css (style)
-				stimulusCss : {color:'#336600','font-size':'2.3em'}
+				stimulusCss : {color:'#000000','font-size':'2.3em'}
 			},
 			category2 :	{
 				name : 'high pitch', //Will appear in the data and in the default feedback message.
@@ -66,14 +66,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					{word: 'Emily'}
 				],
 				//Stimulus css
-				stimulusCss : {color:'#336600','font-size':'2.3em'}
+				stimulusCss : {color:'#000000','font-size':'2.3em'}
 			},
 			attribute1 :
 			{
 				name : 'high density',
 				title : {
 					media : {word : 'high density words'},
-					css : {color:'#0000FF','font-size':'1.8em'},
+					css : {color:'#000000','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
@@ -87,14 +87,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					{word: 'close-knit'}
 				],
 				//Stimulus css
-				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
+				stimulusCss : {color:'#000000','font-size':'2.3em'}
 			},
 			attribute2 :
 			{
 				name : 'low density',
 				title : {
 					media : {word : 'low density words'},
-					css : {color:'#0000FF','font-size':'1.8em'},
+					css : {color:'#000000','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects

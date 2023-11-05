@@ -5,9 +5,9 @@ define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(AP
   //Randomly choose the attribute words from a larger list of attribute words.
   //Internal studies in Project Implicit found no difference in performance between the words.
   var posWords = API.shuffle([
-            'crowded','thick','packed','tight','compact','crammed','condensed','close-knit']);
+	'loose','open','airy','spacious','uncrowded','roomy','sparse','scattered']);
   var negWords = API.shuffle([
-            'loose','open','airy','spacious','uncrowded','roomy','sparse','scattered']);
+	'crowded','thick','packed','tight','compact','crammed','condensed','close-knit']);
   
     return iatExtension({
         category1 : {
