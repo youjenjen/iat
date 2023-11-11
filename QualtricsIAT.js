@@ -50,7 +50,7 @@ define(['pipAPI','https://youjenjen.github.io/iat/iatsoundextension.js'], functi
 		{
 			name : 'dense',
 			title : {
-				media : {word : 'high density'},
+				media : {word : 'dense'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
@@ -71,7 +71,7 @@ define(['pipAPI','https://youjenjen.github.io/iat/iatsoundextension.js'], functi
 		{
 			name : 'not dense',
 			title : {
-				media : {word : 'low density'},
+				media : {word : 'not dense'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
