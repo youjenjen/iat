@@ -5,9 +5,9 @@ define(['pipAPI','https://youjenjen.github.io/iat/iatsoundextension_original.js'
   //Randomly choose the attribute words from a larger list of attribute words.
   //Internal studies in Project Implicit found no difference in performance between the words.
   var posWords = API.shuffle([
-	'spacious','uncrowded','roomy','sparse','scattered']);
+	'spacious','loose','roomy','sparse','scattered']);
   var negWords = API.shuffle([
-	'packed','tight','compact','crammed','condensed']);
+	'packed','congested','compact','crammed','condensed']);
   
     return iatExtension({
         category1 : {
