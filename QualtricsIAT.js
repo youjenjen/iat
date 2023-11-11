@@ -1,6 +1,6 @@
 define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(APIConstructor, iatExtension){
 	var API = new APIConstructor();
-	
+	var soundUrl = '/images/';
   
   //Randomly choose the attribute words from a larger list of attribute words.
   //Internal studies in Project Implicit found no difference in performance between the words.
@@ -18,9 +18,9 @@ define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(AP
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {Audio: 'bm1_nc.mp3'},
-                {Audio: 'bm2_nc.mp3'},
-                {Audio: 'bm3_nc.mp3'},
+                {word: '...',sound: soundUrl + 'bm1_nc.mp3'},
+                {word: '...',sound: soundUrl + 'bm2_nc.mp3'},
+                {word: '...',sound: soundUrl + 'bm3_nc.mp3'},
 				{image: 'bf1_nc.jpg'},
                 {image: 'bf2_nc.jpg'},                 
 				{image: 'bf3_nc.jpg'}     
