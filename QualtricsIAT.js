@@ -18,9 +18,9 @@ define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(AP
                 height : 4 //Used to position the "Or" in the combined block.
             }, 
             stimulusMedia : [ //Stimuli content as PIP's media objects
-                {word: '...',sound: soundUrl + 'bm1_nc.mp3'},
-                {word: '...',sound: soundUrl + 'bm2_nc.mp3'},
-                {word: '...',sound: soundUrl + 'bm3_nc.mp3'},
+                {word: '...',sound: soundUrl + 'sound1.mp3'},
+                {word: '...',sound: soundUrl + 'sound2.mp3'},
+                {word: '...',sound: soundUrl + 'sound3.mp3'},
 				{image: 'bf1_nc.jpg'},
                 {image: 'bf2_nc.jpg'},                 
 				{image: 'bf3_nc.jpg'}     
