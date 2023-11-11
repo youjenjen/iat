@@ -1,4 +1,4 @@
-define(['pipAPI','https://youjenjen.github.io/iat/iatsoundextension.js'], function(APIConstructor, iatExtension){
+define(['pipAPI','https://youjenjen.github.io/iat/iatsoundextension_original.js'], function(APIConstructor, iatExtension){
 	var API = new APIConstructor();
 	var soundUrl = 'https://youjenjen.github.io/iat/images/';
   
