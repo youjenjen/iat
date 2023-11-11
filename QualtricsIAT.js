@@ -48,7 +48,7 @@ define(['pipAPI','https://youjenjen.github.io/iat/iatsoundextension.js'], functi
         },
 		attribute1 :
 		{
-			name : 'high density',
+			name : 'dense',
 			title : {
 				media : {word : 'high density'},
 				css : {color:'#0000FF','font-size':'1.8em'},
@@ -69,7 +69,7 @@ define(['pipAPI','https://youjenjen.github.io/iat/iatsoundextension.js'], functi
 		},
 		attribute2 :
 		{
-			name : 'low density',
+			name : 'not dense',
 			title : {
 				media : {word : 'low density'},
 				css : {color:'#0000FF','font-size':'1.8em'},

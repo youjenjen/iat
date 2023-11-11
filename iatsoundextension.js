@@ -62,44 +62,44 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				//Stimulus css
 				stimulusCss : {color:'#000000','font-size':'2.3em'}
 			},
-			attribute2 :
+			attribute1 :
 			{
-				name : 'Good words',
+				name : 'dense',
 				title : {
-					media : {word : 'Good words'},
+					media : {word : 'dense'},
 					css : {color:'#000000','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'laughter'},
-					{word: 'happy'},
-					{word: 'glorious'},
-					{word: 'joy'},
-					{word: 'wonderful'},
-					{word: 'peace'},
-					{word: 'pleasure'},
-					{word: 'love'}
+					{word: 'crowded'},
+					{word: 'thick'},
+					{word: 'packed'},
+					{word: 'tight'},
+					{word: 'compact'},
+					{word: 'crammed'},
+					{word: 'condensed'},
+					{word: 'close-knit'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#000000','font-size':'2.3em'}
 			},
-			attribute1 :
+			attribute2 :
 			{
-				name : 'Bad words',
+				name : 'not dense',
 				title : {
-					media : {word : 'Bad words'},
+					media : {word : 'not dense'},
 					css : {color:'#000000','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'awful'},
-					{word: 'failure'},
-					{word: 'agony'},
-					{word: 'hurt'},
-					{word: 'horrible'},
-					{word: 'terrible'},
-					{word: 'nasty'},
-					{word: 'evil'}
+					{word: 'loose'},
+					{word: 'open'},
+					{word: 'airy'},
+					{word: 'spacious'},
+					{word: 'uncrowded'},
+					{word: 'roomy'},
+					{word: 'sparse'},
+					{word: 'scattered'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#000000','font-size':'2.3em'}
