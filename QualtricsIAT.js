@@ -53,11 +53,11 @@ define(['pipAPI','https://youjenjen.github.io/iat/iatsoundextension.js'], functi
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-				{word: '...',sound: soundUrl + 'Bass.arco.ff.sulE.D2.stereo.aif'},
-				{word: '...',sound: soundUrl + 'Bassoon.ff.D2.stereo.aif'},
-				{word: '...',sound: soundUrl + 'Horn.ff.D2.stereo.aif'},
-				{word: '...',sound: soundUrl + 'Piano.ff.D2.aif'},
-				{word: '...',sound: soundUrl + 'Tuba.ff.D2.stereo.aif'}
+				{word: '...',sound: soundUrl + 'adj_Bass.arco.ff.sulE.D2.stereo.wav'},
+				{word: '...',sound: soundUrl + 'adj_Bassoon.ff.D2.stereo.wav'},
+				{word: '...',sound: soundUrl + 'adj_Horn.ff.D2.stereo.wav'},
+				{word: '...',sound: soundUrl + 'adj_Piano.ff.D2.wav'},
+				{word: '...',sound: soundUrl + 'adj_Tuba.ff.D2.stereo.wav'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -71,11 +71,11 @@ define(['pipAPI','https://youjenjen.github.io/iat/iatsoundextension.js'], functi
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-				{word: '...',sound: soundUrl + 'BbClarinet.ff.C6.stereo.aif'},
-				{word: '...',sound: soundUrl + 'Flute.nonvib.ff.C6.stereo.aif'},
-				{word: '...',sound: soundUrl + 'Piano.ff.C6.aif'},
-				{word: '...',sound: soundUrl + 'Trumpet.novib.ff.C6.stereo.aif'},
-				{word: '...',sound: soundUrl + 'Viola.arco.ff.sulA.C6.stereo.aif'}
+				{word: '...',sound: soundUrl + 'adj_BbClarinet.ff.C6.stereo.wav'},
+				{word: '...',sound: soundUrl + 'adj_Flute.nonvib.ff.C6.stereo.wav'},
+				{word: '...',sound: soundUrl + 'adj_Piano.ff.C6.wav'},
+				{word: '...',sound: soundUrl + 'adj_Trumpet.novib.ff.C6.stereo.wav'},
+				{word: '...',sound: soundUrl + 'adj_Viola.arco.ff.sulA.C6.stereo.wav'}
 			],
 			//Stimulus css
 			stimulusCss : {color:'#0000FF','font-size':'2.3em'}
