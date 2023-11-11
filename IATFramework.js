@@ -560,6 +560,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				rightInput
 			],
 
+			customize: Sound.setup,
+
 			// user interactions
 			interactions: [
 				// begin trial : display stimulus immediately
@@ -600,6 +602,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					actions: [
 						{type:'removeInput',handle:'All'}, //Cannot respond anymore
 						{type:'hideStim', handle: 'All'}, // hide everything
+						{type:'custom', fn: Sound.stop},
 						{type:'log'}, // log this trial
 						{type:'trigger',handle:'ITI'} // End the trial after ITI
 					]
@@ -610,6 +613,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					actions: [
 						{type:'removeInput',handle:'All'}, //Cannot respond anymore
 						{type:'hideStim', handle: 'All'}, // hide everything
+						{type:'custom', fn: Sound.stop},
 						{type:'trigger',handle:'end', duration:piCurrent.ITIDuration} // Continue to the ITI, after that error fb has been displayed
 					]
 				},
