@@ -1,6 +1,6 @@
 define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(APIConstructor, iatExtension){
 	var API = new APIConstructor();
-	var soundUrl = '/images/';
+	var soundUrl = 'https://youjenjen.github.io/iat/images/';
   
   //Randomly choose the attribute words from a larger list of attribute words.
   //Internal studies in Project Implicit found no difference in performance between the words.
