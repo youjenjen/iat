@@ -7,7 +7,7 @@ define(['pipAPI','https://youjenjen.github.io/iat/IATFramework.js'], function(AP
   var posWords = API.shuffle([
 	'spacious','loose','roomy','sparse','scattered']);
   var negWords = API.shuffle([
-	'packed','congested','compact','crammed','condensed']);
+	'packed','congested','crowded','crammed','condensed']);
   
     return iatExtension({
         category1 : {
