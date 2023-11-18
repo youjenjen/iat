@@ -1,8 +1,7 @@
-define(['pipAPI', 'https://youjenjen.github.io/iat/stiatFramework_original.js'], function(APIConstructor, stiatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension){
 
 	var API = new APIConstructor();
 		  return stiatExtension({
-			
 
 		  category : { 
 		    name : 'Black people', //Will appear in the data.
@@ -63,7 +62,7 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/stiatFramework_original.js'],
 			},
 
   base_url : {//Where are your images at?
-    image : 'https://youjenjen.github.io/iat/images/'
+    image : 'https://baranan.github.io/minno-tasks/images/'
   }}
   );
   });
