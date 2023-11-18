@@ -1,5 +1,5 @@
 define(['pipAPI', 'https://youjenjen.github.io/iat/original_stiatFramework.js'], function(APIConstructor, stiatExtension){
-	var soundUrl = 'https://youjenjen.github.io/iat/images/';
+	
   
 	var API = new APIConstructor();
 		  return stiatExtension({
