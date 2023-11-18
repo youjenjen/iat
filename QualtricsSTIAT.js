@@ -6,9 +6,9 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/stiatFramework1.js'], functio
 		  return stiatExtension({
 
 		  category : { 
-		    name : 'Black people', //Will appear in the data.
+		    name : 'dense', //Will appear in the data.
 		    title : {
-		      media : {word : 'Black people'}, //Name of the category presented in the task.
+		      media : {word : 'dense'}, //Name of the category presented in the task.
 		      css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
@@ -29,7 +29,7 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/stiatFramework1.js'], functio
 			{
 			name : 'low pitch', //Attribute label
 			title : {
-				media : {word : 'Negative'}, //Name of the category presented in the task.
+				media : {word : 'low pitch'}, //Name of the category presented in the task.
 				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 				height : 7 //Used to position the "Or" in the combined block.
 			}, 
@@ -47,7 +47,7 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/stiatFramework1.js'], functio
 			{
 			name : 'high pitch', //Attribute label
 			title : {
-				media : {word : 'Positive'}, //Name of the category presented in the task.
+				media : {word : 'high pitch'}, //Name of the category presented in the task.
 				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 				height : 7 //Used to position the "Or" in the combined block.
 			}, 
