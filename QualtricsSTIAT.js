@@ -2,6 +2,7 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/original_stiatFramework.js'],
 	
   
 	var API = new APIConstructor();
+			var soundUrl = 'https://youjenjen.github.io/iat/images/';
 		  return stiatExtension({
 
 		  category : { 
