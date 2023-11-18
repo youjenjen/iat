@@ -1,4 +1,4 @@
-define(['pipAPI', 'original_stiatFramework.js'], function(APIConstructor, stiatExtension){
+define(['pipAPI', 'https://youjenjen.github.io/iat/original_stiatFramework.js'], function(APIConstructor, stiatExtension){
 	
   
 	var API = new APIConstructor();
