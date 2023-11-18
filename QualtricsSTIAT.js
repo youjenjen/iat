@@ -2,6 +2,8 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/stiatFramework.js'], function
 	
 	var API = new APIConstructor();
 		  return stiatExtension({
+			var soundUrl = 'https://youjenjen.github.io/iat/images/';
+			
 		  category : { 
 		    name : 'Black people', //Will appear in the data.
 		    title : {
@@ -61,7 +63,7 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/stiatFramework.js'], function
 			},
 
   base_url : {//Where are your images at?
-    image : 'https://baranan.github.io/minno-tasks/images/'
+    image : 'https://youjenjen.github.io/iat/images/'
   }}
   );
   });

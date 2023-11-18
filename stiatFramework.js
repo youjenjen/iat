@@ -327,6 +327,48 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             }
         });
 
+		/**
+		 * setup sound support
+		 **/
+		var Sound = (function(){
+			var soundCache = {}; // url: Audio
+			var currentTrial;
+
+			// preload sounds
+			_([att1,att2,cat1,cat2])
+				.map(function(cat){return cat.stimulusMedia;})
+				.flatten()
+				.forEach(function(media){
+					if (media && media.sound){
+						soundCache[media.sound] = new Audio(media.sound);
+					}
+				});
+				//.value();
+				
+			return {
+				start: function(){
+					var src = _.get(currentTrial, 'stimuli[0].$templated.media.$templated.sound');
+				    console.log(src);
+					if (src){
+						soundCache[src].play();
+					}
+				},
+				
+				stop: function(){
+					var src = _.get(currentTrial, 'stimuli[0].$templated.media.$templated.sound');
+					if (src){
+						soundCache[src].pause();
+						soundCache[src].currentTime = 0;
+					}
+				},
+				
+				setup: function(trialSource){
+					currentTrial = trialSource; // we can't use it at this point in time. We need to wait until stim/media are poplated.	
+				}
+			}
+		})()
+
+
 		/***********************************************************************************
 		*
 		* Here starts the script. You might not need to change anything in the actual script.
@@ -384,12 +426,16 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				{handle:'right',on:'keypressed',key:'i'}
 			],
 
+			customize: Sound.setup,
+
 			// user interactions
 			interactions: [
 				// begin trial : display stimulus immediately
 				{
 					conditions: [{type:'begin'}],
-					actions: [{type:'showStim',handle:'targetStim'}]
+					actions: [{type:'showStim',handle:'targetStim'},
+					{type:'custom', fn: Sound.start}
+					]
 				},
 
 				// error
@@ -409,7 +455,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					conditions: [{type:'inputEqualsTrial', property:'corResp'}],	// check if the input handle is equal to correct response (in the trial's data object)
 					actions: [
 						{type:'removeInput',handle:['left','right']}, //Cannot respond anymore
-						{type:'hideStim', handle: 'All'},											// hide everything
+						{type:'hideStim', handle: 'All'},
+						{type:'custom', fn: Sound.stop},											// hide everything
 						{type:'log'},																// log this trial
 						{type:'setInput',input:{handle:'end', on:'timeout',duration:piCurrent.ITIDuration}} // trigger the "end action after ITI"
 					]
