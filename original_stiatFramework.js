@@ -425,12 +425,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				{handle:'right',on:'keypressed',key:'i'}
 			],
 
+			customize: Sound.setup,
+
 			// user interactions
 			interactions: [
 				// begin trial : display stimulus immediately
 				{
 					conditions: [{type:'begin'}],
-					actions: [{type:'showStim',handle:'targetStim'}]
+					actions: [{type:'showStim',handle:'targetStim'},
+					{type:'custom', fn: Sound.start}]
 				},
 
 				// error
@@ -451,6 +454,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					actions: [
 						{type:'removeInput',handle:['left','right']}, //Cannot respond anymore
 						{type:'hideStim', handle: 'All'},											// hide everything
+						{type:'custom', fn: Sound.stop},
 						{type:'log'},																// log this trial
 						{type:'setInput',input:{handle:'end', on:'timeout',duration:piCurrent.ITIDuration}} // trigger the "end action after ITI"
 					]
