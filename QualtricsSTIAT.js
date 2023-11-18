@@ -12,7 +12,7 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/original_stiatFramework.js'],
 		      css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
-		    stimulusMedia : [ //Stimuli content as PIP's media objects
+		    media : [ //Stimuli content as PIP's media objects
     		    	{image : 'black1.jpg'}, 
     			{image : 'black2.jpg'}, 
     			{image : 'black3.jpg'}, 
@@ -32,7 +32,7 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/original_stiatFramework.js'],
 				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 				height : 7 //Used to position the "Or" in the combined block.
 			}, 
-			stimulusMedia : [ //Stimuli
+			media : [ //Stimuli
 				{word: 'Bomb'},
 				{word: 'Abuse'},
 				{word: 'Sadness'},
@@ -51,7 +51,7 @@ define(['pipAPI', 'https://youjenjen.github.io/iat/original_stiatFramework.js'],
 				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 				height : 7 //Used to position the "Or" in the combined block.
 			}, 
-			stimulusMedia : [ //Stimuli
+			media : [ //Stimuli
 				{word: 'Paradise'},
 				{word: 'Pleasure'},
 				{word: 'Cheer'},

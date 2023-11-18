@@ -26,7 +26,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				}, 
-				stimulusMedia : [ //Stimuli
+				media : [ //Stimuli
 					{word: 'Tyron'},
 					{word: 'Malik'},
 					{word: 'Terrell'},
@@ -45,7 +45,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				}, 
-				stimulusMedia : [ //Stimuli
+				media : [ //Stimuli
 					{word: 'Bomb'},
 					{word: 'Abuse'},
 					{word: 'Sadness'},
@@ -64,7 +64,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				}, 
-				stimulusMedia : [ //Stimuli
+				media : [ //Stimuli
 					{word: 'Paradise'},
 					{word: 'Pleasure'},
 					{word: 'Cheer'},
@@ -336,7 +336,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 
 			// preload sounds
 			_([att1,att2,cat1,cat2])
-				.map(function(cat){return cat.stimulusMedia;})
+				.map(function(cat){return cat.media;})
 				.flatten()
 				.forEach(function(media){
 					if (media && media.sound){
@@ -611,9 +611,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		 *	Media Sets
 		 */
 		API.addMediaSets({
-			attribute1 : piCurrent.attribute1.stimulusMedia,
-			attribute2: piCurrent.attribute2.stimulusMedia,
-			category: piCurrent.category.stimulusMedia
+			attribute1 : piCurrent.attribute1.media,
+			attribute2: piCurrent.attribute2.media,
+			category: piCurrent.category.media
 		});
 
 		/**
